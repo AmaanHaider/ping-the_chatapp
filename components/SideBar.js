@@ -2,7 +2,7 @@ import { Avatar } from "@chakra-ui/avatar";
 import { Button } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import { Flex, Text } from "@chakra-ui/layout";
-import { ArrowLeftIcon } from "@chakra-ui/icons";
+import { ArrowLeftIcon, CloseIcon } from "@chakra-ui/icons";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseconfig";
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -36,9 +36,9 @@ export default function Sidebar() {
       chats?.filter(chat => chat.users.includes(user.email))
       .map(
         chat => 
-          <Flex key={Math.random()} p={3} align="center" _hover={{bg: "gray.100", cursor: "pointer"}} onClick={() => redirect(chat.id)}>
+          <Flex key={Math.random()} p={3} align="center" _hover={{bg: "gray.600", cursor: "pointer"}} onClick={() => redirect(chat.id)}>
             <Avatar src="" marginEnd={3} />
-            <Text>{getOtherEmail(chat.users, user)}</Text>
+            <Text color="white">{getOtherEmail(chat.users, user)}</Text>
           </Flex>
       )
     )
@@ -46,7 +46,7 @@ export default function Sidebar() {
 
   return (
     <Flex
-      // bg="blue.100"
+      bg="#0078AA"
       h="100%"
       w="300px"
       borderEnd="1px solid" borderColor="gray.200"
@@ -63,10 +63,10 @@ export default function Sidebar() {
 
         <Flex align="center">
           <Avatar src={user.photoURL} marginEnd={3} />
-          <Text>{user.displayName}</Text>
+          <Text color="white">{user.displayName}</Text>
         </Flex>
 
-        <IconButton size="sm" isRound icon={<ArrowLeftIcon />} onClick={() => signOut(auth)} />
+        <IconButton size="sm" isRound icon={<CloseIcon/>} onClick={() => signOut(auth)} />
 
       </Flex>
 

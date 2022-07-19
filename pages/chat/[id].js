@@ -24,8 +24,8 @@ export default function Chat() {
     messages?.map(msg => {
       const sender = msg.sender === user.email;
       return (
-        <Flex key={Math.random()} alignSelf={sender ? "flex-start" : "flex-end"} bg={sender ? "blue.100" : "green.100"} w="fit-content" minWidth="100px" borderRadius="lg" p={3} m={1}>
-          <Text>{msg.text}</Text>
+        <Flex key={Math.random()}  alignSelf={sender ? "flex-end" : "flex-start"} bg={sender ? "#18978F" : "blue.300"} w="fit-content" minWidth="100px" borderRadius="lg" p={3} m={1}>
+          <Text color="black" >{msg.text}</Text>
         </Flex>
       )
     })
@@ -49,7 +49,7 @@ export default function Chat() {
       <Flex flex={1} direction="column">
         <Topbar email={getOtherEmail(chat?.users, user)} />
 
-        <Flex flex={1} direction="column" pt={4} mx={5} overflowX="scroll" sx={{scrollbarWidth: "none"}}>
+        <Flex flex={1} bg="#F5EDDC" direction="column" pt={4} mx={5} overflowX="scroll" sx={{scrollbarWidth: "none"}}>
           {getMessages()}
           <div ref={bottomOfChat}></div>
         </Flex>
