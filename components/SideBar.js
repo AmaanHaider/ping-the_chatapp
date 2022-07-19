@@ -37,7 +37,7 @@ export default function Sidebar() {
       .map(
         chat => 
           <Flex key={Math.random()} p={3} align="center" _hover={{bg: "gray.100", cursor: "pointer"}} onClick={() => redirect(chat.id)}>
-            <Avatar src={users.photoURL} marginEnd={3} />
+            <Avatar src="" marginEnd={3} />
             <Text>{getOtherEmail(chat.users, user)}</Text>
           </Flex>
       )
