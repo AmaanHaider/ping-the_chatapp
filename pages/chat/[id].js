@@ -1,5 +1,5 @@
 import { Flex, Text } from "@chakra-ui/layout"
-import Sidebar from "../../components/Sidebar"
+import Sidebar from "../../components/SideBar";
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { useCollectionData, useDocumentData } from 'react-firebase-hooks/firestore';
@@ -44,7 +44,7 @@ export default function Chat() {
     >
       <Head><title>Chat App</title></Head>
 
-      <Sidebar />
+      <Sidebar/>
 
       <Flex flex={1} direction="column">
         <Topbar email={getOtherEmail(chat?.users, user)} />

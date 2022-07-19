@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/SideBar'
+
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       </Head>
       
       <Box h="100vh">
-        <Sidebar />
+        <Sidebar/>
       </Box>
       
     </div>
