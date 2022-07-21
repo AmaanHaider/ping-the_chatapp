@@ -24,7 +24,12 @@ export default function Chat() {
     messages?.map(msg => {
       const sender = msg.sender === user.email;
       return (
-        <Flex key={Math.random()}  alignSelf={sender ? "flex-end" : "flex-start"} bg={sender ? "#18978F" : "blue.300"} w="fit-content" minWidth="100px" borderRadius="lg" p={3} m={1}>
+        <Flex key={Math.random()} 
+         alignSelf={sender ? "flex-end" : "flex-start"} 
+         bg={sender ? "#18978F" : "blue.300"} 
+         w="fit-content" 
+         minWidth="100px"
+          borderRadius="lg" p={3} m={1}>
           <Text color="black" >{msg.text}</Text>
         </Flex>
       )
