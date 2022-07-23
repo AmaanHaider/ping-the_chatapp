@@ -51,7 +51,7 @@ export default function Login() {
           </Box>
 
 
-          <Button boxShadow="md" onClick={() => signInWithGoogle("", { prompt: "select_account" })}>Sign In with Google</Button>
+          <Button boxShadow="md" onClick={() => signInWithGoogle("", { prompt: "select_account" })}  _hover={{bg: "black", color:"white",cursor: "pointer"}} >Sign In with Google</Button>
 
         </Stack>
 
