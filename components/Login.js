@@ -17,29 +17,29 @@ export default function Login() {
       </Head>
 
       <Center h="100vh">
+        {/* <Text p={2} style={{
+         color:"black",
+         backgroundColor:"#C4D7E0",
+         fontSize:"40px",
+         fontFamily:"fantasy",
+         borderRadius:"22%"
+         // boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
+       }}>
+         Ping- The chatApp
+       </Text>  */}
 
         <Stack
           align="center"
           bgColor="#9CB4CC"
-          p={16}
+          p={12}
           rounded="3xl"
-          spacing={30}
+          spacing={20}
           boxShadow="lg"
           w="30%"
-          h="55%"
+          h="45%"
         >
 
 
-           <Text p={2} style={{
-            color:"black",
-            backgroundColor:"#C4D7E0",
-            fontSize:"40px",
-            fontFamily:"fantasy",
-            borderRadius:"22%"
-            // boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
-          }}>
-            Ping- The chatApp
-          </Text> 
           <Box
             bgColor="blue.500"
             w="fit-content"
