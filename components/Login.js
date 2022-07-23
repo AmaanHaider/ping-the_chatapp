@@ -35,8 +35,8 @@ export default function Login() {
           rounded="3xl"
           spacing={20}
           boxShadow="lg"
-          w="30%"
-          h="45%"
+          // w="22%"
+          // h="45%"
         >
 
 
