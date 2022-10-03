@@ -1,20 +1,21 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore";
-
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBA5Nzy3tXv7QM3FyXFi5WuARgKllHdLpE",
-  authDomain: "ping-backend-c9f81.firebaseapp.com",
-  projectId: "ping-backend-c9f81",
-  storageBucket: "ping-backend-c9f81.appspot.com",
-  messagingSenderId: "432320497673",
-  appId: "1:432320497673:web:6641b8c47ecafce539d0d8"
+    apiKey: "AIzaSyBGYFvBHKQmQM7lNasVwWVswNHEy9A8UDw",
+    authDomain: "authentication-b4584.firebaseapp.com",
+    projectId: "authentication-b4584",
+    storageBucket: "authentication-b4584.appspot.com",
+    messagingSenderId: "2869570521",
+    appId: "1:2869570521:web:9da7056dff675c864c87c8",
+    measurementId: "G-TNS6BF2RWZ"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const db = getFirestore();
+const analytics = getAnalytics(app);
 
 export { auth, db };
